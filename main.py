@@ -9,19 +9,9 @@ import numpy as np
 import onnxruntime as ort
 import csv
 
-TOKEN = 'REDACTED'
-FOLDER_PATH = 'D:/Main/Programs/StabilityMatrix-win-x64/Data/Packages/ComfyUI/output'
+TOKEN = 'YOUR DISCORD BOT TOKEN HERE'
+FOLDER_PATH = 'PATH TO OUTPUT FOLDER'
 CHANNEL_MAP = {
-    'ai-hentai': {
-        'sfw': 1051216573836304504,
-        'nsfw': 1051216693382357072
-    },
-    'personal': {
-        'sfw': 1254228210359472249,
-        'nsfw': 1254228258019610836,
-        'futanari': 1254228298234331186,
-        'output-dump': 1254708926813962250
-    }
 }
 
 intents = discord.Intents.default()
@@ -88,10 +78,10 @@ def get_image_tags_and_nsfw_status(file_path):
 
 
 def determine_channels(tags, is_nsfw):
-    channels = [CHANNEL_MAP['personal']['output-dump']]
-
-    if 'futanari' in tags:
-        channels.append(CHANNEL_MAP['personal']['futanari'])
+    channels = [CHANNEL_MAP['default']]
+    # change any logic needed for your bot
+    if 'xyz' in tags:
+        channels.append(CHANNEL_MAP['default'])
 
     for tag in tags:
         if tag in CHANNEL_MAP:
