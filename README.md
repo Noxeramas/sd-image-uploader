@@ -16,7 +16,7 @@ This Discord bot monitors a specified folder for new image files and automatical
 - Pillow
 - Watchdog
 - Numpy
-- ONNX model (`wd-v1-4-moat-tagger-v2.onnx`)
+- ONNX model (`wd-v1-4-vit-tagger-v2.onnx`) https://huggingface.co/SmilingWolf/wd-v1-4-vit-tagger-v2/tree/main
 - CSV file with tags (`selected_tags.csv`)
 
 ## Installation
